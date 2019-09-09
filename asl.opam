@@ -10,13 +10,13 @@ bug-reports: "https://github.com/mirage/ocaml-asl/issues"
 doc: "https://mirage.github.io/ocaml-vmnet/"
 
 build: [
-  [ "jbuilder" "subst"] {pinned}
-  [ "jbuilder" "build" "-p" name "-j" jobs ]
+  [ "dune" "subst"] {pinned}
+  [ "dune" "build" "-p" name "-j" jobs ]
 ]
 
 depends: [
   "result"
   "logs"
   "ocamlfind" {build}
-  "jbuilder"   {build & >="1.0+beta9"}
+  "dune"   {build & >= "1.0"}
 ]

@@ -1,0 +1,3 @@
+(executables
+ (names simple reporter reporter_file)
+ (libraries asl))
